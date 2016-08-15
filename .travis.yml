@@ -5,9 +5,4 @@ cache:
     - $HOME/.cache/pip
     - $HOME/.cache/lektor/builds
 install: "pip install Lektor"
-script: "lektor build"
-deploy:
-  provider: script
-  script: "lektor deploy ghpages"
-  on:
-    branch: master
+script: "lektor build && lektor deploy ghpages"
